@@ -29,6 +29,8 @@ def userprofile(request, pk):
     total_room = Room.objects.all().count()
     context = {'user':user, 'rooms':rooms, 'room_messages':room_message, 'topics':topics, 'total_room':total_room}
     return render(request, 'base/profile.html', context)
+
+    
 def loginuser(request):
     
     page = 'login'
